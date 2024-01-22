@@ -13,7 +13,6 @@ export const Icon = ({ icon, className }: Props) => {
 }
 
 export type IconTypes = keyof typeof iconRegistry
-
 export const iconRegistry = {
     brainstorm: "icons/Brainstorm.png",
     calendar: "icons/Calendar.png",
@@ -24,5 +23,8 @@ export const iconRegistry = {
     startup: "icons/Startup.png",
     tasks: "icons/Tasks.png",
     team: "icons/Team.png",
-    trophy: "icons/Torphy.png",
+    trophy: "icons/Trophy.png",
 }
+export const arrayIcons = Object.keys(iconRegistry);
+
+

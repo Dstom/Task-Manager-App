@@ -10,7 +10,8 @@ export type Board = {
 export type Cardlist = {
     id: string,
     name: string,
-    cards: Card[]
+    cards: Card[],
+    ownerId: string
 }
 
 export type Card = {
@@ -26,6 +27,12 @@ export type Tag = {
     cardId: string,
     name: string,
     background: string
+}
+export type User = {
+    id: string,
+    email: string,
+    password: string,
+    name?: string
 }
 
 export type TagTypes = keyof typeof tagsRegistry

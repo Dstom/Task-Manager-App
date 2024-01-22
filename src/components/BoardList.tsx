@@ -11,7 +11,7 @@ export const BoardList = ({ boardList }: Props) => {
         <ul>
             {
                 boardList.map(x => (
-                    <BoardListItem board={x} />
+                    <BoardListItem key={x.id} board={x} />
                 ))
             }
         </ul>

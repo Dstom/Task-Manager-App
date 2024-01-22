@@ -2,6 +2,7 @@ import React from 'react'
 import { BoardList } from './BoardList'
 import { Board } from '../model/types'
 import { MoonIcon, PlusCircleIcon, PlusIcon, SunIcon } from '@heroicons/react/20/solid'
+import { NewBoardModal } from './NewBoardModal'
 
 const boardList: Board[] = [
     { id: "1", name: "Design Board", owner: "user", icon: 'brainstorm' },
@@ -14,10 +15,7 @@ export const Sidebar = () => {
         <div className='sidebar flex flex-col justify-between'>
             <div>
                 <BoardList boardList={boardList} />
-                <div className='flex gap-3 font-semibold hover:cursor-pointer mx-2'>
-                    <PlusCircleIcon className='h-6 w-6 dark:text-white' />
-                    <span>Add new board</span>
-                </div>
+                <NewBoardModal />
             </div>
 
 

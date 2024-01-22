@@ -1,6 +1,7 @@
 import React from 'react'
 import { CardList } from './CardList'
 import { Cardlist } from '../model/types'
+import prisma from '@/prisma/prisma'
 
 const myCardList: Cardlist[] = [
     {
@@ -13,16 +14,17 @@ const myCardList: Cardlist[] = [
                 { id: "4", cardId: "1", name: "asd", background: "#000" },
                 ]
         }
-        ]
+        ],
+        ownerId: "1"
     }
 ]
 
 export const Board = () => {
     return (
-        <div className='board overflow-x-auto'>
+        <div className='board overflow-x-auto overflow-y-hidden'>
             {
                 myCardList.map(cardlist => (
-                    <CardList myCardlist={cardlist} />
+                    <CardList key={cardlist.id} myCardlist={cardlist} />
                 ))
             }
         </div>
